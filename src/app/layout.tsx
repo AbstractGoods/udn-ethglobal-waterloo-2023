@@ -1,8 +1,10 @@
+import './globals.css'
 import '@rainbow-me/rainbowkit/styles.css'
+
 import { Providers } from './providers'
 
 export const metadata = {
-  title: 'wagmi',
+  title: 'Unified Data (Network) Demos| ETHGlobal Waterloo 2023',
 }
 
 export default function RootLayout({
