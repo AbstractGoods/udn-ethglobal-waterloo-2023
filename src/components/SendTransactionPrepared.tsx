@@ -36,8 +36,7 @@ export function SendTransactionPrepared() {
         onSubmit={(e) => {
           e.preventDefault()
           sendTransaction?.()
-        }}
-      >
+        }}>
         <input
           placeholder="address"
           onChange={(e) => setTo(e.target.value)}

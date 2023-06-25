@@ -7,9 +7,7 @@ const walletConnectProjectId = '5c5326451cb37f1e9b85fe65ca9c56e0'
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [mainnet, ...(process.env.NODE_ENV === 'development' ? [goerli] : [])],
-  [
-    publicProvider(),
-  ],
+  [publicProvider()]
 )
 
 const { connectors } = getDefaultWallets({

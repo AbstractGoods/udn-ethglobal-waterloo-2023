@@ -3,8 +3,8 @@
 import { BaseError } from 'viem'
 import { useContractWrite, useWaitForTransaction } from 'wagmi'
 
-import { wagmiContractConfig } from './contracts'
 import { stringify } from '../utils/stringify'
+import { wagmiContractConfig } from './contracts'
 
 export function WriteContract() {
   const { write, data, error, isLoading, isError } = useContractWrite({
@@ -28,8 +28,7 @@ export function WriteContract() {
           write({
             args: [BigInt(tokenId)],
           })
-        }}
-      >
+        }}>
         <input name="tokenId" placeholder="token id" />
         <button disabled={isLoading} type="submit">
           Mint

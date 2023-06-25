@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { recoverMessageAddress } from 'viem'
-import { type Address, useSignMessage } from 'wagmi'
+import { useSignMessage, type Address } from 'wagmi'
 
 export function SignMessage() {
   const [recoveredAddress, setRecoveredAddress] = useState<Address>()
@@ -35,8 +35,7 @@ export function SignMessage() {
           const formData = new FormData(element)
           const message = formData.get('message') as string
           signMessage({ message })
-        }}
-      >
+        }}>
         <input name="message" type="text" required />
         <button disabled={isLoading} type="submit">
           {isLoading ? 'Check Wallet' : 'Sign Message'}

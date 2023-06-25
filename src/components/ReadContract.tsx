@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { BaseError } from 'viem'
-import { type Address, useContractRead } from 'wagmi'
+import { useContractRead, type Address } from 'wagmi'
 
 import { wagmiContractConfig } from './contracts'
 
@@ -30,8 +30,7 @@ function TotalSupply() {
       <button
         disabled={isRefetching}
         onClick={() => refetch()}
-        style={{ marginLeft: 4 }}
-      >
+        style={{ marginLeft: 4 }}>
         {isRefetching ? 'loading...' : 'refetch'}
       </button>
     </div>
@@ -40,7 +39,7 @@ function TotalSupply() {
 
 function BalanceOf() {
   const [address, setAddress] = useState<Address>(
-    '0xa5cc3c03994DB5b0d9A5eEdD10CabaB0813678AC',
+    '0xa5cc3c03994DB5b0d9A5eEdD10CabaB0813678AC'
   )
   const { data, error, isLoading, isSuccess } = useContractRead({
     ...wagmiContractConfig,

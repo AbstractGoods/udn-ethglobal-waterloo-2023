@@ -8,9 +8,9 @@ import {
   useWaitForTransaction,
 } from 'wagmi'
 
-import { wagmiContractConfig } from './contracts'
 import { useDebounce } from '../hooks/useDebounce'
 import { stringify } from '../utils/stringify'
+import { wagmiContractConfig } from './contracts'
 
 export function WriteContractPrepared() {
   const [tokenId, setTokenId] = useState('')
@@ -36,8 +36,7 @@ export function WriteContractPrepared() {
         onSubmit={(e) => {
           e.preventDefault()
           write?.()
-        }}
-      >
+        }}>
         <input
           placeholder="token id"
           onChange={(e) => setTokenId(e.target.value)}

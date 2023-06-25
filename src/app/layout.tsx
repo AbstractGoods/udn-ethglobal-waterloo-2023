@@ -1,5 +1,5 @@
-import './globals.css'
 import '@rainbow-me/rainbowkit/styles.css'
+import './globals.css'
 
 import { Providers } from './providers'
 

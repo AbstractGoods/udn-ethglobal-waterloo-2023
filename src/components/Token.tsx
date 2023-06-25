@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { type Address, useToken } from 'wagmi'
+import { useToken, type Address } from 'wagmi'
 
 export function Token() {
   const [address, setAddress] = useState<Address>(
-    '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
+    '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984'
   )
   const { data, error, isError, isLoading, refetch } = useToken({ address })
 

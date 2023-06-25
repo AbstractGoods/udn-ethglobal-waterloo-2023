@@ -26,8 +26,7 @@ export function SendTransaction() {
             to: address,
             value: parseEther(value),
           })
-        }}
-      >
+        }}>
         <input name="address" placeholder="address" />
         <input name="value" placeholder="value (ether)" />
         <button type="submit">Send</button>

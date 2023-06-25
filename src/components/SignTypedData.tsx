@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { recoverTypedDataAddress } from 'viem'
-import { type Address, useSignTypedData } from 'wagmi'
+import { useSignTypedData, type Address } from 'wagmi'
 
 const domain = {
   name: 'Ether Mail',
@@ -54,7 +54,7 @@ export function SignTypedData() {
           message,
           primaryType: 'Mail',
           signature: data,
-        }),
+        })
       )
     })()
   }, [data])

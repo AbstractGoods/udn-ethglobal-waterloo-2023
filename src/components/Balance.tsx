@@ -50,8 +50,7 @@ export function FindBalance() {
         value={value}
       />
       <button
-        onClick={() => (value === address ? refetch() : setAddress(value))}
-      >
+        onClick={() => (value === address ? refetch() : setAddress(value))}>
         {isLoading ? 'fetching...' : 'fetch'}
       </button>
       <div>{data?.formatted}</div>
