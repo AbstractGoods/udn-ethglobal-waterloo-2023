@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Message",
+    "description": "A message object",
+    "type": "object",
+    "properties": {
+        "persona": {
+            "description": "The name of the persona who posted the message",
+            "type": "string"
+        },
+        "body": {
+            "description": "The body of the message",
+            "type": "string"
+        },
+        "timestamp": {
+            "description": "The Unix timestamp when the message was posted",
+            "type": "number"
+        }
+    },
+    "required": ["persona", "body", "timestamp"]
+}

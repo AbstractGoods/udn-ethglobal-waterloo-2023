@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Persona",
+    "description": "A persona object",
+    "type": "object",
+    "properties": {
+        "avatar": {
+            "description": "The data-uri of the persona's avatar",
+            "type": "string"
+        },
+        "name": {
+            "description": "The persona's name",
+            "type": "string"
+        },
+        "bio": {
+            "description": "The persona's bio",
+            "type": "string"
+        }
+    },
+    "required": ["avatar", "name", "bio"]
+}
